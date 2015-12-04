@@ -10,12 +10,6 @@
   }
 }
 
-.row {
-  @extend %clearfix;
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 0 $spacing-unit;
-}
 [class*="columns-"] {
   width: 100%;
   float: left;

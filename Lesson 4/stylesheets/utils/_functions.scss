@@ -28,3 +28,31 @@
 @function font($path, $base: $base-url) {
   @return asset($base, 'fonts/', $path);
 }
+
+// $Context Calculator
+// -------------------------------------//
+// target / context = result
+//
+// @example             p { font-size: base-context-calc(24, 16, px, 18 * 1.65); }
+
+@function base-context-calc($scale, $base, $value) {
+  @return ($scale/$base) + $value;
+}
+
+
+// $Measure-Margin
+// -------------------------------------//
+// divide 1 unit of measure by given font-size & return relative value
+
+@function base-measure-margin($scale, $measure, $value) {
+  $pixelValue: $scale/$measure;
+  $remValue: $pixelValue * $base-font-base;
+
+  @if $value == rem {
+    @return $pixelValue + $value;
+  } @else if $value == em {
+    @return ($remValue/$scale) + $value;
+  } @else {
+    @return $remValue * 1px;
+  }
+}

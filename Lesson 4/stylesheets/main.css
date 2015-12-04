@@ -1,10 +1,18 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic|Open+Sans:400,400italic,700,700italic);
+.base-tera, .base-giga, .base-mega, h1, .base-alpha, h2, .base-beta, h3, .title, .base-gamma, h4, .sub-title, .base-delta, h5, .base-epsilon, .base-zeta, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  color: #ACCFCC;
+  font-family: "Libre Baskerville", serif; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic|Open+Sans:400,400italic,700,700italic);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -354,18 +362,10 @@ td,
 th {
   padding: 0; }
 
-/**
- * Set up a decent box model on the root element
- */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font: normal 112.5% / 1.65 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
 *, *::before, *::after {
   box-sizing: inherit; }
 
@@ -395,35 +395,89 @@ a {
  */
 body {
   color: #595241;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.6;
+  font-weight: normal;
+  font-size: 112.5;
+  line-height: 1.65;
   font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #ACCFCC;
-  font-family: "Libre Baskerville", serif;
-  font-style: italic;
-  font-weight: 400;
+.base-tera, .base-giga, .base-mega, h1, .base-alpha, h2, .base-beta, h3, .title, .base-gamma, h4, .sub-title, .base-delta, h5, .base-epsilon, .base-zeta, h6 {
+  text-rendering: optimizeLegibility;
   line-height: 1;
-  margin: 30px 0;
-  padding: 0; }
+  margin-top: 0; }
+
+.base-tera {
+  font-size: 5.2rem;
+  margin-bottom: 3.15152rem; }
+
+.base-giga {
+  font-size: 4rem;
+  margin-bottom: 2.42424rem; }
+
+.base-mega, h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1.93939rem; }
+
+.base-alpha, h2 {
+  font-size: 2.66667rem;
+  margin-bottom: 1.61616rem; }
+
+.base-beta, h3, .title {
+  font-size: 2.13333rem;
+  margin-bottom: 1.29293rem; }
+
+.base-gamma, h4, .sub-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.9697rem; }
+
+.base-delta, h5 {
+  font-size: 1.06667rem;
+  margin-bottom: 0.64646rem; }
+
+.base-epsilon {
+  font-size: 0.93333rem;
+  margin-bottom: 0.56566rem; }
+
+.base-zeta, h6 {
+  font-size: 0.8rem;
+  margin-bottom: 0.48485rem; }
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 4rem;
+    margin-bottom: 2.42424rem; } }
+
+@media (min-width: 768px) {
+  .sub-title {
+    font-size: 3.2rem;
+    margin-bottom: 1.93939rem; } }
 
 h1 {
-  font-size: 60px;
-  text-shadow: 2px 2px 0 #ffffff, 3px 3px 0 #EBDEC7; }
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #EBDEC7; }
+  @media (min-width: 768px) {
+    h1 {
+      text-shadow: 2px 2px 0 #ffffff, 3px 3px 0 #EBDEC7; } }
 
 h2 {
-  font-size: 40px; }
+  text-shadow: 1px 1px 0 #ffffff, 1px 2px 0 #EBDEC7; }
+  @media (min-width: 768px) {
+    h2 {
+      text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #EBDEC7; } }
 
-h3 {
-  margin-top: 40px;
-  font-size: 30px; }
+h2:before,
+h2:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 1px;
+  background: #ACCFCC;
+  box-shadow: 1px 1px 0 #ffffff, 1px 2px 0 #EBDEC7;
+  margin: 0 15px;
+  width: 15%; }
+  @media (min-width: 768px) {
+    h2:before,
+    h2:after {
+      margin: 0 30px;
+      width: 25%; } }
 
 /**
  * Clear inner floats
@@ -480,9 +534,26 @@ h3 {
   position: absolute;
   width: 1px; }
 
+.pull-quote {
+  position: relative;
+  padding: context-calc(4em, 4em, em); }
+  .pull-quote:before, .pull-quote:after {
+    height: context-calc(4em, 4em, em);
+    opacity: 0.5;
+    position: absolute;
+    font-size: 4em;
+    color: #EBDEC7; }
+  .pull-quote:before {
+    content: '“';
+    top: 0;
+    left: 0; }
+  .pull-quote:after {
+    content: '”';
+    bottom: 0;
+    right: 0; }
+
 .row {
   max-width: 1200px;
-  margin: 0 auto;
   padding: 0 30px; }
 
 [class*="columns-"] {
@@ -524,6 +595,5 @@ h3 {
     width: calc((100% / 12) * 12 - 15px); } }
 
 header {
-  border-bottom: 1px solid #EBDEC7;
-  padding: 0;
+  margin: 30px auto;
   text-align: center; }
