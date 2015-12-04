@@ -8,13 +8,13 @@ html, body {
 }
 
 h1 {
-	color: #ACCFCC;
+	color: $heading-color;
 	margin: 1rem auto;
 	text-align: center;
 	font-family: $heading-font;
 	font-style: italic;
-	font-size: 5rem;
-	box-shadow: 2px 2px 0 0 #B8AE9C, 3px 3px 0 0 rgba(0,0,0,.2);
+	font-size: 4rem;
+	box-shadow: 2px 2px 0 0 $bg, 4px 4px 0 0 $shadow;
 }
 
 .main {
@@ -23,18 +23,17 @@ h1 {
 
 	p {
 		padding: 1rem;
-		color: #595241;
+		color: $text-color;
 	}
 
 	aside {
-		background: rgba(0,0,0,0.2);
 		float: right;
 		width: 33%;
 		margin: 0em 1rem 1rem 1rem;
 		position: relative;
 
 		h2 {
-			color: #ACCFCC;
+			color: $heading-color;
 			padding-left: 0.66rem;
 			font-family: $heading-font;
 		}
@@ -44,8 +43,7 @@ h1 {
 			top: 0;
 			left: 60px;
 			width: 100px;
-			transform: translate(0, -100%);
-			filter: invert(1);
+			filter: invert(.5);
 		}
 	}
 }

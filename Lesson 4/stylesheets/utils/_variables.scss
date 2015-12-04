@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$base-font-size:   20px;
+$base-font-weight: 300;
+$small-font-size:  $base-font-size * 0.75;
+$base-line-height: 1.6;
+
+/// Regular font family
+/// @type List
+$heading-font-stack: 'Libre Baskerville', serif !default;
+$heading-font-weight: 400;
+$heading-line-height: 1;
+$h1-font-size:        $base-font-size * 3;
+$h2-font-size:        $base-font-size * 2;
+$h3-font-size:        $base-font-size * 1.5;
+$h4-font-size:        $base-font-size * 1;
+$h5-font-size:        $base-font-size * .875;
+$h6-font-size:        $base-font-size * .65;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+/// Copy text color
+/// @type Color
+$text-color: #595241 !default;
+$brand-color: #ACCFCC !default;
+
+$light-grey: #ffffff !default;
+$mid-grey: #EBDEC7 !default;
+$dark-grey: #444 !default;
+
+$bg-color: $light-grey;
+
+$link-color: $brand-color;
+$link-hover-color: darken($brand-color, 10%);
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @see {mixin} respond-to
+$breakpoints: (
+  'small': (min-width: 320px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 1024px),
+) !default;
+$max-width:     1200px !default;
+$spacing-unit:  30px;
+$block-grid:    12;
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$img-url: '../img/' !default;
