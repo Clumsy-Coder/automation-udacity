@@ -27,6 +27,7 @@ $base-line-height: 1.65 !default;
 $base-font-size: 112.5 !default;
 $base-font-base: 20 * ($base-font-size/100) !default;
 $base-measure: $base-font-base * $base-line-height;
+$base-prefixes: -webkit-, -moz-, -ms-, '' !default;
 
 $heading-font-family: 'Libre Baskerville', serif !default;
 $heading-font-weight: 400;
@@ -55,7 +56,6 @@ $base-headings: (
 ) !default;
 
 $base-typescale-unit:rem;
-
 
 // $Pull-Quotes Variables
 // -------------------------------------//

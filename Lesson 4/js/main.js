@@ -1,5 +1,4 @@
 (function() {
-
-	foo = 1;
-
+  var foo = 123;
+  return foo;
 })();

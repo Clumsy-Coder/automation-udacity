@@ -9,6 +9,18 @@ body {
   font-family: $base-font-family;
   @extend %base-breakword;
   @extend %base-ot--onum;
+  @include base-hyphens(auto);
+}
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  @include base-hyphens(none);
 }
 
 %base-hN {

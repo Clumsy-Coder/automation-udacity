@@ -390,6 +390,14 @@ a {
     color: #595241;
     text-decoration: underline; }
 
+body {
+  word-wrap: break-word; }
+
+body {
+  -webkit-font-feature-settings: 'onum';
+  -ms-font-feature-settings: 'onum';
+  font-feature-settings: 'onum'; }
+
 /**
  * Basic typography style for copy text
  */
@@ -398,7 +406,25 @@ body {
   font-weight: normal;
   font-size: 112.5;
   line-height: 1.65;
-  font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
+
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
 
 .base-tera, .base-giga, .base-mega, h1, .base-alpha, h2, .base-beta, h3, .title, .base-gamma, h4, .sub-title, .base-delta, h5, .base-epsilon, .base-zeta, h6 {
   text-rendering: optimizeLegibility;
@@ -494,18 +520,18 @@ h2:after {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
+  width: 100%;
+  /* 1 */
   max-width: 1200px;
   /* 1 */
   margin-left: auto;
   /* 2 */
   margin-right: auto;
   /* 2 */
-  padding-left: 20px;
+  padding-left: 30px;
   /* 3 */
-  padding-right: 20px;
-  /* 3 */
-  width: 100%;
-  /* 1 */ }
+  padding-right: 30px;
+  /* 3 */ }
 
 /**
  * Hide text while making it readable for screen readers
@@ -551,10 +577,6 @@ h2:after {
     content: '”';
     bottom: 0;
     right: 0; }
-
-.row {
-  max-width: 1200px;
-  padding: 0 30px; }
 
 [class*="columns-"] {
   width: 100%;
