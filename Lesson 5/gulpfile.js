@@ -42,14 +42,6 @@ gulp.task('lint', function () {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('tests', function() {
-  gulp.src('tests/spec/extraSpec.js')
-      .pipe(jasmine({
-        integration: true,
-        vendor: 'js/**/*.js'
-      }));
-});
-
 gulp.task('dist', [
   'copy-html',
   'copy-images',
